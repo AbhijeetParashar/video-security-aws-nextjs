@@ -1,24 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Video Streaming Techniques Demo
 
-## Getting Started
+This repository demonstrates various video streaming techniques using Next.js, including integration with AWS S3, CloudFront, MediaConvert, and MUX.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. [Overview](#overview)
+2. [Techniques](#techniques)
+   - [AWS S3 + CloudFront with Signed URLs](#aws-s3--cloudfront-with-signed-urls)
+   - [MUX](#mux)
+   - [AWS S3 + CloudFront + MediaConvert](#aws-s3--cloudfront--mediaconvert)
+3. [Setup and Installation](#setup-and-installation)
+4. [Usage](#usage)
+5. [Contributing](#contributing)
+6. [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-## ENV SAMPLE
+This demo project is built using Next.js to showcase different video streaming techniques for secure and efficient video delivery. It includes examples of using:
 
-Add the following ENV variables
+- **AWS S3 + CloudFront with Signed URLs**: Secure video delivery using AWS S3 for storage and CloudFront for content delivery with signed URLs.
+- **MUX**: A video platform providing hosting, transcoding, and streaming services with analytics.
+- **AWS S3 + CloudFront + MediaConvert**: A pipeline for video transcoding and delivery using AWS services.
+
+## Techniques
+
+### AWS S3 + CloudFront with Signed URLs
+
+This technique uses AWS S3 to store video files and AWS CloudFront as the CDN to distribute content. Signed URLs are generated to restrict access to authorized users only, providing secure video delivery.
+
+#### Features
+
+- Secure video streaming with restricted access.
+- Content delivery through AWS CloudFront.
+- Serverless architecture.
+
+### MUX
+
+MUX provides a powerful video platform with capabilities like hosting, transcoding, and streaming. It also offers detailed video analytics and monitoring tools.
+
+#### Features
+
+- Easy integration with RESTful API.
+- Automatic transcoding and adaptive bitrate streaming.
+- Advanced video analytics.
+
+### AWS S3 + CloudFront + MediaConvert
+
+This approach utilizes AWS MediaConvert to transcode videos stored in S3. The transcoded videos are then delivered via AWS CloudFront, optimizing the delivery for different devices and network conditions.
+
+#### Features
+
+- High-quality video transcoding with AWS MediaConvert.
+- Adaptive bitrate streaming for various devices.
+- Secure content delivery with AWS CloudFront.
+
+## Setup and Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/yourusername/video-streaming-techniques-demo.git
+   cd video-streaming-techniques-demo
+
+   ```
+
+2. **Install Dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Configure environment variables:**:
 
 ```bash
 NEXT_PUBLIC_BASE_URL
@@ -34,4 +86,10 @@ NEXT_PUBLIC_AWS_REGION
 NEXT_PUBLIC_S3_BUCKET_NAME
 NEXT_PUBLIC_CLOUDFRONT_KEY_PAIR_ID
 NEXT_PUBLIC_CLOUDFRONT_PRIVATE_KEY
+```
+
+4. **Run the development server:**:
+
+```bash
+npm run dev
 ```
