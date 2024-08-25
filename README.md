@@ -12,7 +12,6 @@ This repository demonstrates various video streaming techniques using Next.js, i
 3. [Setup and Installation](#setup-and-installation)
 4. [Usage](#usage)
 5. [Contributing](#contributing)
-6. [License](#license)
 
 ## Overview
 
@@ -93,3 +92,23 @@ NEXT_PUBLIC_CLOUDFRONT_PRIVATE_KEY
 ```bash
 npm run dev
 ```
+
+## Usage
+
+After setting up the project and running the development server, you can explore the different video streaming techniques implemented in this demo. Each technique is demonstrated on a separate page, accessible via specific routes. Below is a guide on how to use each feature.
+
+### 1. AWS S3 + CloudFront with Signed URLs
+
+- **Description**: This page demonstrates secure video delivery using AWS S3 and CloudFront with signed URLs. Users can only access the video if they have a valid signed URL, ensuring restricted access to authorized users.
+
+### 2. MUX
+
+- **Description**: This page demonstrates video streaming using MUX, a third-party service that handles video hosting, transcoding, and playback with adaptive bitrate streaming and built-in analytics.
+
+### 3. AWS S3 + CloudFront + MediaConvert
+
+- **Description**: This page showcases a pipeline using AWS S3, MediaConvert, and CloudFront for video transcoding and streaming. Videos are first transcoded to multiple formats with MediaConvert and then delivered via CloudFront with adaptive bitrate streaming.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
